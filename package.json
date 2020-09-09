@@ -1,0 +1,54 @@
+{
+  "name": "jest-mock-component",
+  "version": "0.1.0",
+  "description": "Utility library to make mocking React components in Jest easier",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sourceallies/jest-mock-component.git"
+  },
+  "keywords": [
+    "Jest",
+    "React",
+    "Testing",
+    "Mocking",
+    "Component"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sourceallies/jest-mock-component/issues"
+  },
+  "homepage": "https://github.com/sourceallies/jest-mock-component#readme",
+  "devDependencies": {
+    "@testing-library/react": "^11.0.2",
+    "@types/jest": "^26.0.13",
+    "@types/react": "^16.9.49",
+    "jest": "^26.4.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": "16.13.x",
+    "jest": "26.4.x"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
