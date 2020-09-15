@@ -4,7 +4,8 @@
   "description": "Utility library to make mocking React components in Jest easier",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --fix --ext .ts --ext .tsx"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,10 @@
     "@testing-library/react": "^11.0.2",
     "@types/jest": "^26.0.13",
     "@types/react": "^16.9.49",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-plugin-react": "^7.20.6",
     "jest": "^26.4.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
