@@ -7,5 +7,6 @@ it('should render correctly', () => {
             <button>Hello</button>
         </div>
     );
+
     expect(screen.getByRole('button', {name: 'Hello'})).not.toBeNull();
-})
+});
