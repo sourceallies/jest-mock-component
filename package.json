@@ -2,10 +2,12 @@
   "name": "jest-mock-component",
   "version": "0.1.0",
   "description": "Utility library to make mocking React components in Jest easier",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "lint": "eslint . --fix --ext .ts --ext .tsx"
+    "lint": "eslint . --fix --ext .ts --ext .tsx",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "@testing-library/react": "^11.0.2",
     "@types/jest": "^26.0.13",
     "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.9",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
     "eslint": "^7.9.0",
