@@ -1,16 +1,26 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ComponentUnderTest from './ComponentUnderTest';
-import {setupMockComponent, getMockComponent} from './mockLibrary';
-import OtherComponent from './OtherComponent';
+import {setupMockComponent, getMockComponent} from './index';
+import ChildComponent from './ChildComponent';
 
-jest.mock('./OtherComponent');
+jest.mock('./ChildComponent');
 
 beforeEach(() => {
-    setupMockComponent(OtherComponent);
+    setupMockComponent(ChildComponent);
 });
 
-test('zero is passed to other Component', () => {
+test('getMockComponent should be able to find a mock component', () => {
     render(<ComponentUnderTest />);
-    expect(getMockComponent(OtherComponent).props.value).toEqual(0);
+    expect(getMockComponent(ChildComponent)).not.toBeNull();
+});
+
+test('the mock should have the name of the function prefixed with Mock', () => {
+    const mock = ChildComponent as jest.Mock;
+    expect(mock.getMockName()).toEqual('Mock:ChildComponent');
+});
+
+test('The mock component element should hold the prop value', () => {
+    render(<ComponentUnderTest />);
+    expect(getMockComponent(ChildComponent).props.value).toEqual(0);
 });
